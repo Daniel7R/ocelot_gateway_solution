@@ -8,7 +8,7 @@ namespace GatewaySolution.Extensions
     {
         public static WebApplicationBuilder AddAppAuthentication(this WebApplicationBuilder builder)
         {
-            var settingsSection = builder.Configuration.GetSection("APISettings");
+            var settingsSection = builder.Configuration.GetSection("APISettings:JwtOptions");
 
             var secret = settingsSection.GetValue<string>("Secret");
             var issuer = settingsSection.GetValue<string>("Issuer");

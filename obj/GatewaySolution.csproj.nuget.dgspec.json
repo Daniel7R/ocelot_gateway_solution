@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[1.20.1, )"
             },
+            "Newtonsoft.Json.Schema": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
             "Ocelot": {
               "target": "Package",
               "version": "[23.4.3, )"
