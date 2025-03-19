@@ -15,7 +15,7 @@ namespace GatewaySolution.Middlewares
         {
             _next = next;
             _logger = logger;
-            _schemas = LoadSchemas(); // Cargar todos los esquemas en memoria
+            // _schemas = LoadSchemas(); // Cargar todos los esquemas en memoria
         }
 
         private Dictionary<string, JSchema> LoadSchemas()
