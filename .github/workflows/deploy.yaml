@@ -1,0 +1,18 @@
+name: "Deploy Gateway 🚀🚀"
+
+on: 
+    workflow_dispatch:
+    push:
+        branches:
+            - main
+
+    renderDeploy:
+        name: "Deploy Gateway🚀🚀"
+        runs-on: ubuntu-latest
+
+        steps:
+          - name: "Deploy to render"
+            uses: johnbeynon/render-deploy-action@v0.0.8
+            with:
+              service-id: ${{ secrets.RENDER_SERVICE_ID }}
+              api-key: ${{ secrets.RENDER_API_KEY }}
