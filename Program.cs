@@ -3,6 +3,7 @@ using GatewaySolution.Extensions;
 using GatewaySolution.Middlewares;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using Ocelot.Provider.Polly;
 using System.Text.Json;
 using DotNetEnv;
 using System.Text.Json.Nodes;
@@ -49,7 +50,7 @@ catch (JsonException ex)
 
 
 builder.AddAppAuthentication();
-builder.Services.AddOcelot(builder.Configuration);
+builder.Services.AddOcelot(builder.Configuration).AddPolly();
 // builder.Services.AddHttpClient<SwaggerLoader>();
 
 var app = builder.Build();
