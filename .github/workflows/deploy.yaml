@@ -6,6 +6,7 @@ on:
         branches:
             - main
 
+jobs:
     renderDeploy:
         name: "Deploy Gateway🚀🚀"
         runs-on: ubuntu-latest
