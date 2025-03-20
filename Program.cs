@@ -48,7 +48,10 @@ catch (JsonException ex)
     throw new Exception("OCELOT_ROUTES contains invalid JSON.", ex);
 }
 
-
+builder.Services.AddHttpClient("OcelotClient")
+    .AddTransientHttpErrorPolicy(policy =>
+        policy.WaitAndRetryAsync(3, retryAttempt => 
+            TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))));
 builder.AddAppAuthentication();
 builder.Services.AddOcelot(builder.Configuration).AddPolly();
 // builder.Services.AddHttpClient<SwaggerLoader>();
