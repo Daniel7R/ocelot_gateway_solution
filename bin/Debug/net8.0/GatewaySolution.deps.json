@@ -14,6 +14,8 @@
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.20.1",
           "Newtonsoft.Json.Schema": "4.0.1",
           "Ocelot": "23.4.3",
+          "Ocelot.Provider.Polly": "23.4.3",
+          "Polly": "8.5.2",
           "System.Text.Json": "9.0.3"
         },
         "runtime": {
@@ -310,6 +312,37 @@
           "lib/net8.0/Ocelot.dll": {
             "assemblyVersion": "23.4.3.0",
             "fileVersion": "23.4.3.0"
+          }
+        }
+      },
+      "Ocelot.Provider.Polly/23.4.3": {
+        "dependencies": {
+          "Ocelot": "23.4.3",
+          "Polly": "8.5.2"
+        },
+        "runtime": {
+          "lib/net8.0/Ocelot.Provider.Polly.dll": {
+            "assemblyVersion": "23.4.3.0",
+            "fileVersion": "23.4.3.0"
+          }
+        }
+      },
+      "Polly/8.5.2": {
+        "dependencies": {
+          "Polly.Core": "8.5.2"
+        },
+        "runtime": {
+          "lib/net6.0/Polly.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.5.2.4319"
+          }
+        }
+      },
+      "Polly.Core/8.5.2": {
+        "runtime": {
+          "lib/net8.0/Polly.Core.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.5.2.4319"
           }
         }
       },
@@ -1198,6 +1231,27 @@
       "sha512": "sha512-rLY9u8GeyjrMKwGdzz7KQu/yXteDytP5iXwWiIMBBcJWBjiYVali0hibq0ONx+5R4z4Cn6Z0U0mS7P6sAYfuPg==",
       "path": "ocelot/23.4.3",
       "hashPath": "ocelot.23.4.3.nupkg.sha512"
+    },
+    "Ocelot.Provider.Polly/23.4.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZcP5YwEAa9luJk00V9vHhMe3H4+eUJrKGXp7f0xywHdF/o30YtcKtzNnltCu0VxGvozf6LKNOfOTpqidoGemYw==",
+      "path": "ocelot.provider.polly/23.4.3",
+      "hashPath": "ocelot.provider.polly.23.4.3.nupkg.sha512"
+    },
+    "Polly/8.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vbXsGgkG86nG+TOwY+SmtrGrRHmHH0DQaxtILx//d3Dz/ocJ8izSNYzdvU2gEtWa/LDD8zJLvD3HdjEkdlvkhg==",
+      "path": "polly/8.5.2",
+      "hashPath": "polly.8.5.2.nupkg.sha512"
+    },
+    "Polly.Core/8.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1MJKdxv4zwDmiWvYvVN24DsrWUfgQ4F83voH8bhbtLMdPuGy8CfTUzsgQhvyrl1a7hrM6f/ydwLVdVUI0xooUw==",
+      "path": "polly.core/8.5.2",
+      "hashPath": "polly.core.8.5.2.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
       "type": "package",

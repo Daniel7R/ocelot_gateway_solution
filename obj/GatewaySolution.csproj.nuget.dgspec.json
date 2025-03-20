@@ -72,6 +72,10 @@
               "target": "Package",
               "version": "[23.4.3, )"
             },
+            "Polly": {
+              "target": "Package",
+              "version": "[8.5.2, )"
+            },
             "System.Text.Json": {
               "target": "Package",
               "version": "[9.0.3, )"
