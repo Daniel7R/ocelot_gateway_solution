@@ -490,10 +490,10 @@
           }
         }
       },
-      "Polly/8.5.1": {
+      "Polly/8.5.2": {
         "type": "package",
         "dependencies": {
-          "Polly.Core": "8.5.1"
+          "Polly.Core": "8.5.2"
         },
         "compile": {
           "lib/net6.0/Polly.dll": {
@@ -506,7 +506,7 @@
           }
         }
       },
-      "Polly.Core/8.5.1": {
+      "Polly.Core/8.5.2": {
         "type": "package",
         "compile": {
           "lib/net8.0/Polly.Core.dll": {
@@ -2554,10 +2554,10 @@
         "ocelot.provider.polly.nuspec"
       ]
     },
-    "Polly/8.5.1": {
-      "sha512": "/kMFDkE3Tl6rKA1o+JJZ+r3ij8kHVRkIcHhx2fjvoTDl6risPH3KfCb0g9tfFni4qUbcPqkhDNcb0EvMPpyRKw==",
+    "Polly/8.5.2": {
+      "sha512": "vbXsGgkG86nG+TOwY+SmtrGrRHmHH0DQaxtILx//d3Dz/ocJ8izSNYzdvU2gEtWa/LDD8zJLvD3HdjEkdlvkhg==",
       "type": "package",
-      "path": "polly/8.5.1",
+      "path": "polly/8.5.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2575,14 +2575,14 @@
         "lib/netstandard2.0/Polly.xml",
         "package-icon.png",
         "package-readme.md",
-        "polly.8.5.1.nupkg.sha512",
+        "polly.8.5.2.nupkg.sha512",
         "polly.nuspec"
       ]
     },
-    "Polly.Core/8.5.1": {
-      "sha512": "47BFjJJhlfSrwLgKoouCJYOYd+IRtFSrvaI9/QL3hbs6qGRtByw7D3QBVnGiDPNNSZ7oHfE7Fm/QIg/gd2ypWw==",
+    "Polly.Core/8.5.2": {
+      "sha512": "1MJKdxv4zwDmiWvYvVN24DsrWUfgQ4F83voH8bhbtLMdPuGy8CfTUzsgQhvyrl1a7hrM6f/ydwLVdVUI0xooUw==",
       "type": "package",
-      "path": "polly.core/8.5.1",
+      "path": "polly.core/8.5.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2603,7 +2603,7 @@
         "lib/netstandard2.0/Polly.Core.xml",
         "package-icon.png",
         "package-readme.md",
-        "polly.core.8.5.1.nupkg.sha512",
+        "polly.core.8.5.2.nupkg.sha512",
         "polly.core.nuspec"
       ]
     },
@@ -5978,6 +5978,7 @@
       "Newtonsoft.Json.Schema >= 4.0.1",
       "Ocelot >= 23.4.3",
       "Ocelot.Provider.Polly >= 23.4.3",
+      "Polly >= 8.5.2",
       "System.Text.Json >= 9.0.3"
     ]
   },
@@ -6051,6 +6052,10 @@
           "Ocelot.Provider.Polly": {
             "target": "Package",
             "version": "[23.4.3, )"
+          },
+          "Polly": {
+            "target": "Package",
+            "version": "[8.5.2, )"
           },
           "System.Text.Json": {
             "target": "Package",

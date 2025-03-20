@@ -4,6 +4,9 @@ using GatewaySolution.Middlewares;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 using Ocelot.Provider.Polly;
+using Polly;
+using Polly.Retry;
+using System.Net.Http;
 using System.Text.Json;
 using DotNetEnv;
 using System.Text.Json.Nodes;
@@ -49,9 +52,8 @@ catch (JsonException ex)
 }
 
 builder.Services.AddHttpClient("OcelotClient")
-    .AddTransientHttpErrorPolicy(policy =>
-        policy.WaitAndRetryAsync(3, retryAttempt => 
-            TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))));
+    .ConfigurePrimaryHttpMessageHandler(() => new PollyHttpClientHandler());
+
 builder.AddAppAuthentication();
 builder.Services.AddOcelot(builder.Configuration).AddPolly();
 // builder.Services.AddHttpClient<SwaggerLoader>();
@@ -69,7 +71,7 @@ app.MapGet("/", () => "Healthy!");
 //     await File.WriteAllTextAsync("ocelot.json", JsonSerializer.Serialize(ocelotConfig));
 // }
 
-app.UseMiddleware<OpenApiValidationMiddleware>();
+// app.UseMiddleware<OpenApiValidationMiddleware>();
 await app.UseOcelot();
 
 
