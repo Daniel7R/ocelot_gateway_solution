@@ -68,6 +68,10 @@
               "target": "Package",
               "version": "[23.4.3, )"
             },
+            "Ocelot.Provider.Polly": {
+              "target": "Package",
+              "version": "[23.4.3, )"
+            },
             "System.Text.Json": {
               "target": "Package",
               "version": "[9.0.3, )"
