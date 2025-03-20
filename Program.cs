@@ -55,7 +55,7 @@ builder.Services.AddOcelot(builder.Configuration).AddPolly();
 
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
+app.MapGet("/", () => "Healthy!");
 
 // var routeLoader = app.Services.GetRequiredService<SwaggerLoader>();
 // var routes = await routeLoader.LoadRoutesFromSwagger();
